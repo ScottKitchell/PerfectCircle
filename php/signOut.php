@@ -1,0 +1,10 @@
+<?
+///////////////////////////////////////////////////////////// Sign Out //////////////////////////////////////////////////////////////
+
+session_start();
+setcookie("user", "", time()-72000, "/");
+$_SESSION = array();
+session_destroy();
+header('location:http://www.perfectcircle.social/welcome.php');
+
+?>
